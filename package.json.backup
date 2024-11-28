@@ -1,21 +1,9 @@
 {
-  "name": "recipe_finder",
-  "version": "0.0.0",
-  "description": "recipe",
-  "main": "eslint.config.js",
-  "repository": {
-    "type": "git",
-    "url": "Recipe_finder"
-  },
+  "name": "spooncular",
   "private": true,
+  "version": "0.0.0",
   "type": "module",
   "homepage": "https://aista12.github.io/Recipe_finder",
-  
-  "keywords": [
-    "recipe"
-  ],
-  "author": "Aista",
-  "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
