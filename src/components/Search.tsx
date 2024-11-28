@@ -13,7 +13,6 @@ function Search() {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState<string>(" ");
   const [waiting, startTransation] = useTransition();
-  const [error, setError] = useState(null);
   useEffect(() => {
     // if(!apiKey)return
     startTransation(() => {
