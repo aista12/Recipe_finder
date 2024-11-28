@@ -1,4 +1,4 @@
-import "./index.css";
+import "./index.css"; 
 import MainPage from "./components/MainPage";
 import { Route, Routes } from "react-router-dom";
 import Search from "./components/Search";

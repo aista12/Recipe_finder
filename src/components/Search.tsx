@@ -13,26 +13,35 @@ function Search() {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState<string>(" ");
   const [waiting, startTransation] = useTransition();
+  const [error, setError] = useState(null);
   useEffect(() => {
-    const apiKey = import.meta.env.VITE_API_KEY;
-    if (!apiKey) {
-      console.error("API key is missing");
-    }
+    // if(!apiKey)return
     startTransation(() => {
       axios
         .get(
-          `https://www.themealdb.com/api/json/v1/1/search.php?s=${debouncedSearchTerm}`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=dcbdf40c309f4319aeb314638a65405b&query=${debouncedSearchTerm}`,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            // params: {
+            //   apiKey: apiKey,
+            //   query: {debouncedSearchTerm}
+            // },
+          }
         )
         .then((res) => {
           setSearchResults(
-            res.data.meals?.map((meals: any) => ({
-              id: meals.idMeal,
-              title: meals.strMeal,
-              image: meals.strMealThumb,
+            res.data.results?.map((meals: any) => ({
+              id: meals.id,
+              title: meals.title,
+              image: meals.image,
             })) || []
           );
         })
         .catch((err) => {
+          //TODO tell the user about the error
+          // window.location.replace('/');
           console.log(err);
         });
     });
