@@ -44,6 +44,12 @@ jobs:
           name: production-files
           path: ./dist
 
+      - name: Create .nojekyll
+        run: echo > ./dist/.nojekyll
+
+      - name: Create .htaccess
+        run: echo '<FilesMatch "\.(js|mjs)$">\n  AddType application/javascript .js\n  AddType application/javascript .mjs\n</FilesMatch>' > ./dist/.htaccess
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
