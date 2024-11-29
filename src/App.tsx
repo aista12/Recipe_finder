@@ -12,9 +12,9 @@ function App() {
     <>
       <MainPage />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path="/search" element={<Search />} />
-        <Route path="/details" element={<Details/>} />
+        <Route path='/Recipe_finder/' element={<Home/>}/>
+        <Route path="/Recipe_finder/search" element={<Search />} />
+        <Route path="/Recipe_finder/details" element={<Details/>} />
       </Routes>
    </>
   );

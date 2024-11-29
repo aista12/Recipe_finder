@@ -84,7 +84,7 @@ function Search() {
                 {searchResults.map((recipe) => (
                   <Link
                     key={recipe.id}
-                    to={`/details?id=${recipe.id}&image=${recipe.image}&title=${recipe.title}`}
+                    to={`/Recipe_finder/details?id=${recipe.id}&image=${recipe.image}&title=${recipe.title}`}
                     className="text-white hover:text-white"
                   >
                     <li
