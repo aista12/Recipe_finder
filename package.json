@@ -3,9 +3,13 @@
   "version": "0.0.0",
   "description": "recipe",
   "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "Recipe_finder"
+  },
   "private": true,
   "type": "module",
-  "homepage": "https://aista12.github.io/",
+  "homepage": "https://aista12.github.io/Recipe_finder",
   "keywords": [
     "recipe"
   ],
