@@ -3,5 +3,4 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Recipe_finder/', // Replace with your repository name
 });
