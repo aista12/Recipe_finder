@@ -8,14 +8,11 @@ import Home from "./components/Home";
 
 
 function App() {
-  if(window.location.pathname.endsWith('/Recipe_finder/')){
-    window.location.href = '/'
-  }
   return (
     <>
       <MainPage />
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/Recipe_finder/' element={<Home/>}/>
         <Route path="/search" element={<Search />} />
         <Route path="/details" element={<Details/>} />
       </Routes>
