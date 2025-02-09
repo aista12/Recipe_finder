@@ -78,15 +78,15 @@ export const Details = () => {
       <div className=" p-10 lg:flex-row lg:gap-[15vw] lg:px-[10vw] bg-[url('./assets/img4.jpeg')] bg-cover bg-center ">
         <div className="bg-[#000000a0] flex flex-col p-10 lg:flex-row lg:gap-[8vw] lg:px-[8vw]">
           <div>
+            <h1 className="text-5xl font-semibold m-5 text-cyan-100">
+              {title}
+            </h1>
             {image && (
               <img
                 src={image}
                 className=" object-cover p-5 rounded lg:h-[60vh] lg:w-[50vw] "
               />
             )}
-            <h1 className="text-5xl font-semibold m-5 text-cyan-100">
-              {title}
-            </h1>
           </div>
           <div className=" text-cyan-100  bg-cover  mt-5 lg:w-[65vh] lg:h-[80%] lg:mt-[3vh]  pt-10 p-10 items-center bg-[#000000a0]">
             <h2 className="text-3xl font-medium mb-3 ">Ingredients:</h2>
