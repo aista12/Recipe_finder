@@ -1,7 +1,8 @@
 import Navbar from "./Navbar";
 import Search from "./Search";
 import Vegs from "./Vegs";
-import React from "react";
+import * as React from 'react'; 
+
 
 function Home() {
   return (

@@ -1,5 +1,3 @@
-
-
 const apiKey: string | undefined = process.env.REACT_APP_API_KEY;
 
 if (!apiKey) {

@@ -1,7 +1,7 @@
 import { useEffect, useState, useTransition } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import React from "react";
+import * as React from 'react';
 
 interface Recipe {
   id: number;
@@ -85,9 +85,7 @@ function Search() {
               {searchResults.map((recipe) => (
                 <Link
                   key={recipe.id}
-                  to={
-                    "/Recipe_finder/details?id=${recipe.id}&image=${recipe.image}&title=${recipe.title}"
-                  }
+                  to={`/Recipe_finder/details?id=${recipe.id}&image=${encodeURIComponent(recipe.image)}&title=${encodeURIComponent(recipe.title)}`}
                   className="text-white hover:text-white"
                 >
                   <li

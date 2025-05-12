@@ -24,7 +24,7 @@ export const Details = () => {
             "Content-Type": "application/json",
           },
         }
-      )
+      )      
       .then((res) => {
         let result:Ingredients[]=[]
         res.data.ingredients?.map((ing:{name:string,amount:{us:{value:number,unit:string}, metric:{value:number,unit:string}},image:string}) => {
