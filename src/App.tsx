@@ -11,8 +11,6 @@ import Bookmarks from "./components/Bookmarks";
 function App() {
   return (
     <>
-      {/* <MainPage /> */}
-      {/* <Vegs/> */}
       <Routes>
         <Route path="/Recipe_finder/" element={<Home />} />
         {/* <Route path="/Recipe_finder/search" element={<Search/>} /> */}
