@@ -75,10 +75,10 @@ export const Details = () => {
   }, [id]);
   return !error?(
     <>
-      <div className=" p-10 lg:flex-row lg:gap-[15vw] lg:px-[10vw] bg-[url('./assets/img4.jpeg')] bg-cover bg-center ">
-        <div className="bg-[#000000a0] flex flex-col p-10 lg:flex-row lg:gap-[8vw] lg:px-[8vw]">
+      <div className="  lg:flex-row lg:gap-[15vw] lg:px-[10vw] ">
+        <div className=" flex flex-col lg:flex-row lg:gap-[8vw] lg:px-[8vw]">
           <div>
-            <h1 className="text-5xl font-semibold m-5 text-cyan-100">
+            <h1 className="text-3xl font-semibold m-5">
               {title}
             </h1>
             {image && (
@@ -88,26 +88,26 @@ export const Details = () => {
               />
             )}
           </div>
-          <div className=" text-cyan-100  bg-cover  mt-5 lg:w-[65vh] lg:h-[80%] lg:mt-[3vh]  pt-10 p-10 items-center bg-[#000000a0]">
-            <h2 className="text-3xl font-medium mb-3 ">Ingredients:</h2>
-            <hr className="my-4"></hr>
+          <div className="  m-2 -mt-2 lg:w-[65vh] lg:h-[80%] lg:mt-[3vh] p-6 items-center ">
+            <h2 className="text-2xl font-normal ">Ingredients:</h2>
+            <hr className="my-4 bg-black"></hr>
             <ul>
               {ingredients.map((item, index) => (
                 <li key={index} className="mb-2">
                   <strong>{item.name}</strong>: {item.amount} {item.unit}
                 </li>
               ))}
-              <a href="#tutorial" className="text-blue-600 mt-5">
+              <a href="#tutorial" className="text-blue-700 mt-5">
                 Click here to see cooking tutorials..
               </a>
             </ul>
           </div>
         </div>
-        <div className="bg-[#000000a0] text-white mt-5 flex-col p-20">
-          <h2 className="text-2xl font-semibold mt-2" id="tutorial">
-            Cooking tutorial:
+        <div className=" flex-col p-6 m-2 -mt-3">
+          <h2 className="text-2xl font-normal" id="tutorial">
+            Cooking tutorials:
           </h2>
-          <hr className="my-3" />
+          <hr className="my-4 bg-black"></hr>
           <div className="mt-5 w-[30wv] h-[50%] grid grid-cols-1 md:grid-cols-3 gap-5">
             {video.length > 0 ? (
               video.map((video) => (

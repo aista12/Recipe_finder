@@ -55,10 +55,10 @@ function Search() {
   return waiting == false ? (
     <>
       <div className=" relative">
-        <div className="flex flex-col p-20 items-center ">
+        <div className="flex flex-col lg:p-20 pt-10 items-center px-2 ">
           <label
             htmlFor="search"
-            className="text-[#000] font-mono block text-5xl mb-4 text-center"
+            className="text-[#000] font-mono block text-4xl mb-4 text-center"
           >
             What do you want on your table today?
           </label>
@@ -81,7 +81,7 @@ function Search() {
         </div>
         <div className="p-10">
           {searchResults.length > 0 ? (
-            <ul className="grid grid-cols-2 md:grid-cols-4 gap-5 sm:grid-cols-3 ">
+            <ul className="grid grid-cols-2 md:grid-cols-4 gap-5 sm:grid-cols-1 ">
               {searchResults.map((recipe) => (
                 <Link
                   key={recipe.id}

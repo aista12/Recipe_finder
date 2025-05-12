@@ -18,8 +18,8 @@ function Navbar() {
   // };
 
   return (
-    <nav className="flex justify-between bg-[#4ad66d] py-3 font-semibold px-16">
-      <div className="flex items-center space-x-2">
+    <nav className="flex justify-between bg-[#4ad66d] py-3 font-semibold lg:px-32 px-5 w-screen">
+      <div className="flex items-center space-x-2 ">
         <Link to={"/Recipe_finder/"}>
           <img src={mainLogo} alt="Spoonacular Logo" className="h-12 w-12" />
         </Link>
@@ -32,8 +32,8 @@ function Navbar() {
         </Link>
       </div>
 
-      <div className="flex items-center space-x-2 w-[60%] justify-between gap-4">
-        <label className="w-[80%]">
+      <div className="flex items-center lg:space-x-4  justify-between lg:gap-4 gap-4  ">
+        {/* <label className="w-[80%]">
           <input
             type="search"
             // value={searchTerm}
@@ -44,7 +44,7 @@ function Navbar() {
             name="search"
             placeholder="Search"
           />
-        </label>
+        </label> */}
 
         {username ? (
           <>
